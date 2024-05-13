@@ -39,9 +39,9 @@ def author(request):
     return render(request, 'quotes/author.html', {'form': AuthorForm()})
 
 
-def aboutauthor(request, fullname):
-    aut = get_object_or_404(Author, fullmane=fullname)
-    return render(request, 'quotes/page_of_author.html', {'author': aut})
+def description_auth(request, id_):
+    authors = Author.objects.filter(pk=id_).all()
+    return render(request, template_name='quotes/descript_author.html', context={'authors': authors})
 
 
 
