@@ -9,5 +9,5 @@ urlpatterns = [
     path('<int:page>', views.main, name='root_paginate'),
     path('quote/', views.quote, name='quote'),
     path('author/', views.author, name='author'),
-    path('about_author/<str:fullname>', views.aboutauthor, name='about_author'),
+   path('about_author/<int:id>', views.description_auth, name='about_author'),
 ]
