@@ -9,7 +9,7 @@
         <div class="quote" itemscope="" itemtype="http://schema.org/CreativeWork">
             <span class="text" itemprop="text">{{quote.quote}}</span>
             <span>by <small class="author" itemprop="author">{{quote.author|author}}</small>
-        <a href="{% url 'quotes:aboutauthor' quote.author.fullname %}" role="button">(about)</a>
+        <a href="{% url 'quotes:description_auth' author.id %}" role="button">(about)</a>
         </span>
             <div class="tags">
                 Tags:
